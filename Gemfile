@@ -79,4 +79,5 @@ gem "refile-mini_magick"
 # jQuery
 gem 'jquery-rails'
 
+gem 'rubocop', require: false
 
