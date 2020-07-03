@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  namespace :public do
+    get 'posts/new'
+    get 'posts/index'
+    get 'posts/show'
+    get 'posts/edit'
+  end
   devise_for :users, :controller => {
   	:registrations => 'users/registrations',
   	:sessions => 'users/sessions'
@@ -8,5 +14,8 @@ Rails.application.routes.draw do
   	get 'sign_in', :to => 'users/sessions#new'
   	get 'sign_out', :to => 'users/sessions#destroy'
   end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  scope module: :public do
+  	resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy]
+  end
 end
