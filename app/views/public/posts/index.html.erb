@@ -1,0 +1,9 @@
+<h1>index</h1>
+
+<% @posts.each do |post| %>
+  <div class="index_box">
+  	<div class="index_post">
+      <%= post.body %>
+    </div>
+  </div>
+<% end %>
