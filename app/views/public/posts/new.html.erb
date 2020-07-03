@@ -1,2 +1,7 @@
-<h1>Public::Posts#new</h1>
-<p>Find me in app/views/public/posts/new.html.erb</p>
+<h1>new</h1>
+
+<%= form_with model: @post, url: posts_path, local: true do |f| %>
+  <%= f.text_area :body, placeholder: '150 characters' %>
+
+  <%= f.submit 'Create' %>
+<% end %>
