@@ -3,14 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .index_box {
+	width: 420px;
 	display: flex;
 	background-color: #FFCCCC;
-	border-radius: 3px;
 }
 
 .index_box > .index_post {
-	width: 100%;
-	height: 100%;
+	width: 400px;
+	height: 150px;
 	margin: 10px;
 	background-color: #fff;
 	border-radius: 5px;
