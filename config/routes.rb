@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   end
 
   scope module: :public do
+    root 'homes#top'
   	resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy]
   end
 end
