@@ -4,8 +4,9 @@
   <div class="index_box">
   	<div class="index_post">
       <%= post.body %>
-      <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-success' %>
-      <%= link_to 'Delete', post_path(post), method: :delete, data: {confirm: '本当に削除しますか？'}, class: 'btn btn-warning' %>
+
+      <%= link_to 'Delete', post_path(post), method: :delete, data: {confirm: '本当に削除しますか？'}, class: 'btn btn-warning pull-right' %>
+      <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-success pull-right' %>
     </div>
   </div>
 <% end %>
