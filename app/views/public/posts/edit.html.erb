@@ -1,7 +1,11 @@
-<h1>edit</h1>
+<h1>EDIT</h1>
 
-<%= form_with model: @post, url: post_path(@post), local: true do |f| %>
-  <%= f.text_area :body, placeholder: '150 characters' %>
+<div class="row">
+  <%= form_with model: @post, url: post_path(@post), local: true do |f| %>
+    <%= f.text_area :body, placeholder: '150 characters' %>
+</div>
 
+<div class="row">
   <%= f.submit 'Update' %>
+</div>
 <% end %>

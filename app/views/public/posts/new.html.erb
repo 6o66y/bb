@@ -1,7 +1,11 @@
-<h1>new</h1>
+<h1>NEW</h1>
 
-<%= form_with model: @post, url: posts_path, local: true do |f| %>
-  <%= f.text_area :body, placeholder: '150 characters' %>
+<div class="row">
+  <%= form_with model: @post, url: posts_path, local: true do |f| %>
+    <%= f.text_area :body, placeholder: '150 characters' %>
+</div>
 
+<div class="row">
   <%= f.submit 'Create' %>
+</div>
 <% end %>
