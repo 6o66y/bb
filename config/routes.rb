@@ -4,9 +4,13 @@ Rails.application.routes.draw do
   	:sessions => 'users/sessions'
   }
 
-  devise_scope :user do
+  devise_scope :users do
   	get 'sign_in', :to => 'users/sessions#new'
   	get 'sign_out', :to => 'users/sessions#destroy'
+  end
+
+  scope module: :users do
+    resources :users, only: [:index, :show, :edit, :update]
   end
 
   scope module: :public do
