@@ -1,11 +1,11 @@
 <h1>EDIT</h1>
 
-<div class="row">
-  <%= form_with model: @post, url: post_path(@post), local: true do |f| %>
+<%= form_with model: @post, url: post_path(@post), local: true do |f| %>
+  <div class="row">
     <%= f.text_area :body, placeholder: '150 characters' %>
-</div>
+  </div>
 
-<div class="row">
-  <%= f.submit 'Update' %>
-</div>
+  <div class="row">
+    <%= f.submit 'Update' %>
+  </div>
 <% end %>
