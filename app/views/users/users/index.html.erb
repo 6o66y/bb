@@ -1,5 +1,9 @@
-<h1>USERs</h1>
+<h1 class="text-center">USERs</h1>
 
 <% @users.each do |user| %>
-  <%= user.nickname %>
+  <div class="user_index">
+    <div class="col-md-12 text-center user_nickname">
+      <%= user.nickname %>
+    </div>
+  </div>
 <% end %>
