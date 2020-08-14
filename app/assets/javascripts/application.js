@@ -16,3 +16,12 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+
+//posts_index
+$(function(){
+	$('.open').on('click', function(){
+		$('.more').show();
+		$(this).hide();
+	});
+});
